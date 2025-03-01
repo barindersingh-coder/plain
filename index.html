@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainID - Blockchain-Based Authenticator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGNmNzR0cGRldjZxdDh6dnI0d2IwaHN6djk3aWM5NnY2cG9tMGNsMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/G5ZzaFMyDNoPu/giphy.gif') no-repeat center center/cover;
+            color: white;
+            transition: background 0.5s, color 0.5s;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            color: white;
+            flex-wrap: wrap;
+        }
+        .navbar h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .navbar div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .navbar a, .theme-button {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .theme-button {
+            background: #ff9800;
+            border: none;
+            cursor: pointer;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .feature-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .navbar div {
+                flex-direction: column;
+            }
+            .container {
+                width: 90%;
+                padding: 30px;
+            }
+            .feature-box {
+                width: 90%;
+            }
+        }
+    </style>
+    <script>
+        let isDefaultTheme = true;
+        function changeTheme() {
+            const body = document.body;
+            if (isDefaultTheme) {
+                body.style.background = 'linear-gradient(45deg, #1e1e1e, #3a3a3a)';
+                body.style.color = 'lightgray';
+            } else {
+                body.style.background = "url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWVtM3dhZW1leXl1aHlqbWJ0em9icmswb2drcjI4b3ZzbjRoaXJubiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yidUzpnEFKvKi53JT2/giphy.gif') no-repeat center center/cover";
+                body.style.color = 'white';
+            }
+            isDefaultTheme = !isDefaultTheme;
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar">
+        <h1>ChainID</h1>
+        <div>
+            <button class="theme-button" onclick="changeTheme()">Change Theme</button>
+            <a href="signup.html">Sign In</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Welcome to ChainID</h2>
+        <p>A blockchain-based authentication system providing secure, decentralized identity verification.</p>
+    </div>
+    <div class="features">
+        <div class="feature-box">
+            <h3>Decentralized Security</h3>
+            <p>Unlike Firebase and Microsoft Auth, ChainID operates without a central authority, enhancing security.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Privacy Focused</h3>
+            <p>Users have full control over their data with end-to-end encryption.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Blockchain Transparency</h3>
+            <p>Every authentication attempt is recorded securely on the blockchain.</p>
+        </div>
+    </div>
+</body>
+</html>
